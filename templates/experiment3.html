@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Neatness  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20100703
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+	
+jQuery(document).ready(function(){
+     jQuery("#btn").click(function(){   
+          setInterval(function(){ 
+            jQuery.ajax({url:"/five", success:function(result){
+               jQuery("#text5").val(result);
+               }});
+            },2000);
+        });
+});
+jQuery(document).ready(function(){
+      jQuery("#btn").click(function(){   
+          setInterval(function(){ 
+            jQuery.ajax({url:"/six", success:function(result){
+               jQuery("#text6").val(result);
+               }});
+            },2000);
+        });
+});
+jQuery(document).ready(function(){
+        jQuery("#btn").click(function(){  
+          setInterval(function(){ 
+            jQuery.ajax({url:"/seven", success:function(result){
+               jQuery("#text7").val(result);
+               }});
+            },2000);
+        });
+});
+</script>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Experiment3</title>
+<link href="/static/style2.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1>ExpEyes</h1><br><br><br>
+			<p>Experiment for Young Engineers and Scientists</p>
+		</div>
+		<div id="search">
+			<form method="get" action="">
+				<fieldset>
+					<input type="text" name="s" id="search-text" size="15" value="enter keywords here..." />
+					<input type="submit" id="search-submit" value="GO" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li><a href="/"">Home</a></li>
+			<li class="current_page_item"><a href="/experiment3">Experiment</a></li>
+			
+			<li><a href="/signin">sign in</a></li>
+			<li><a href="/signup">Sign up</a></li>
+
+                        <li><a href="/signout">Sign out</a></li>
+			<li><a href="/contact">Contact</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="page" id="page">
+
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<div class="post">
+						
+                                                        
+						
+                                                         
+						<div class="entry">
+							
+                                                    <h2 class="title"><a href="#">Experiment 3: Reading the Analog voltage levels</a></h2><br><br>    
+                                                        <p>Expeyes has an analog input channel,You can read the voltage levels on (A0 , A1, A3)</p><br>   
+							<p>By clicking the below button you can see the voltage changes in expeyes during  every 2 seconds.<p><br>
+
+
+                                                      <button id="btn">click</button><br>
+
+			                               <form class="form">
+					              <input type="text" class="text1" id="text1"/>
+                                                      <input type="text" class="text2" id="text2"/>
+                                                      <input type="text" class="text3" id="text3"/>
+                                                      <input type="text" class="text4" id="text4"/>
+                                                      <input type="text" class="text8" id="text8"/>
+                                                      <input type="text" class="text5" STYLE="background-color: #d8d81b;" id="text5"/>
+                                                      <input type="text" class="text6" STYLE="background-color: #d8d81b;" id="text6"/>
+                                                      <input type="text" class="text7" STYLE="background-color: #d8d81b;" id="text7"/>
+                                                       
+					              
+			                              </form>
+		                                      
+                                                      </p>
+
+
+
+						</div>
+					</div>
+					
+					<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>ExpEyes Welcomes</h2>
+							<h3 class="title2">$context.username</h3><br>
+							<p>Experiment for Young engineers and scienitsts</p>
+						</li>
+						 <li>
+							<h2>Experiments</h2>
+							<ul>
+								<li><a href="/experiment1">Experiment1</a></li>
+								<li><a href="/experiment2">Experiment2</a></li>
+								<li><a href="/experiment3">Experiment3</a></li>
+                                                                <li><a href="/experiment4">Experiment4</a></li>
+	                                                        <li><a href="/experiment6">Experiment5</a></li>
+
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) 2008 Sreeharikmarar.com All rights reserved. .</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

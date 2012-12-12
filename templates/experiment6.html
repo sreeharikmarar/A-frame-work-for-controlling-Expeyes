@@ -1,0 +1,147 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Neatness  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20100703
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+        var data = new google.visualization.DataTable();
+
+        
+
+	
+        data.addColumn('number','X');
+        
+       
+        data.addRows(200);
+
+        var i;
+        for(i=0;i<200;i+=1){
+
+                
+        /*data.setValue(i, 0, i);*/
+        
+
+        }
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, {width: 590, height: 480, title: 'Expeyes'});
+      }
+</script>                       
+
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Experiment5</title>
+<link href="/static/style2.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1>ExpEyes</h1><br><br><br>
+			<p>Experiment for Young Engineers and Scientists</p>
+		</div>
+		<div id="search">
+			<form method="get" action="">
+				<fieldset>
+					<input type="text" name="s" id="search-text" size="15" value="enter keywords here..." />
+					<input type="submit" id="search-submit" value="GO" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li class="current_page_item"><a href="/experiment5">Experiment</a></li>
+			
+			<li><a href="/signin">sign in</a></li>
+			<li><a href="/signup">Sign up</a></li>
+
+                        <li><a href="/signout">sign out</a></li>
+			<li><a href="/contact">Contact</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="page" id="page">
+
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<div class="post">
+						
+                                                        
+						
+                                                         
+						<div class="entry">
+							
+                                                    <h2 class="title"><a href="#">Experiment 5: Capture a sine wave from the SINE output of Expeyes using A0</a></h2><br><br>    
+                                                         <p>ExpEyes has an output pin called SINE on which you will get a sine wave frequency about 90Hz(amplitude +/-4).We will capture this signal using A0 and plot it,we will find out the actual frequency from the plot.</P>  
+							<p>click the below button to plot a sine wave </p><br>
+						      <button><a href="/experiment5">click</a></button><br>
+
+						      <div id="chart_div" class="graph"></div>
+						      
+ 						    
+							
+					              
+			                              </form>
+		                                      
+                                                      </p>
+
+
+
+						</div>
+					</div>
+					
+					<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>ExpEyes Welcomes</h2>
+							<h3 class="title2">$context.username</h3><br>
+							<p>Experiment for Young engineers and scienitsts</p>
+						</li>
+						 <li>
+							<h2>Experiments</h2>
+							<ul>
+								<li><a href="/experiment1">Experiment1</a></li>
+								<li><a href="/experiment2">Experiment2</a></li>
+								<li><a href="/experiment3">Experiment3</a></li>
+                                                                <li><a href="/experiment4">Experiment4</a></li>
+								<li><a href="/experiment5">Experiment5</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) 2008 Sreeharikmarar.com All rights reserved. .</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

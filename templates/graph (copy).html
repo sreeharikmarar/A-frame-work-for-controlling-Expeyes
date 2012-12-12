@@ -1,0 +1,38 @@
+$def with(x)
+<html>
+        <head>
+        
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+        var data = new google.visualization.DataTable();
+
+        var x = $x;
+
+	
+        data.addColumn('number','X');
+        
+       
+        data.addRows(200);
+
+        var i;
+        for(i=0;i<200;i+=1){
+
+                
+        data.setValue(i, 0, x[i]);
+        
+
+        }
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, {width: 800, height: 480, title: 'Expeyes'});
+      }
+    </script>
+</head>
+
+  <body>
+    <div id="chart_div"></div>
+  </body>
+</html>

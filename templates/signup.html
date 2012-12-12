@@ -1,0 +1,226 @@
+ 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Neatness  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20100703
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type = "text/javascript">
+
+function validateForm()
+{
+
+var x=document.forms["myForm"]["fname"].value
+if (x==null || x=="")
+  {
+  alert("First name must be filled out");
+  return false;
+  }
+
+var x=document.forms["myForm"]["lname"].value
+if (x==null || x=="")
+  {
+  alert("Last name must be filled out");
+  return false;
+  }
+
+var x=0
+for (var i=0; i < document.myForm.gender.length; i++)
+   {
+   if (document.myForm.gender[i].checked)
+      {
+          x = document.myForm.gender[i].value;
+      }
+   }
+if (x!='male' && x!='female')
+   {
+    alert("Gender must be selected");
+    return false;
+   }
+
+var d = document.forms["myForm"]["dd"].value
+var a = parseInt(d);
+var m = document.forms["myForm"]["mm"].value
+var b= parseInt(m);
+var y = document.forms["myForm"]["yyyy"].value
+var c= parseInt(y);
+
+if (a<=0)
+    {
+     alert("Date must be valid");
+     return false;
+    }
+if (a>31)
+    {
+     alert("Date must be valid");
+     return false;
+    }
+if (b<=0)
+{
+     alert("month must be valid");
+     return false;
+}
+if (b>12)
+{
+    alert("month must be valid");
+    return false;
+}
+if (c<1900)
+{
+    alert("year must be valid");
+    return false;
+}
+if (c>2011)
+{
+    alert("year must be valid");
+    return false;
+}
+
+var x=document.forms["myForm"]["email"].value
+var atpos=x.indexOf("@");
+var dotpos=x.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+  {
+  alert("Not a valid e-mail address");
+  return false;
+  }
+
+var x=document.forms["myForm"]["pswd1"].value
+var y=document.forms["myForm"]["pswd2"].value
+if (x==null || x=="")
+  {
+  alert("Password must be filled out");
+  return false;
+  }
+if (x!=y)
+  {
+  alert("Passwords doesn't match");
+  return false;
+  }
+
+}
+
+</script>
+
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Sign up</title>
+<link href="/static/style2.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/static/form1.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1>ExpEyes</h1><br><br><br>
+			<p>Experiment for Young Engineers and Scientists</p>
+		</div>
+		<div id="search">
+			<form method="get" action="">
+				<fieldset>
+					<input type="text" name="s" id="search-text" size="15" value="enter keywords here..." />
+					<input type="submit" id="search-submit" value="GO" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			
+<li ><a href="/">Home</a></li>
+			<li ><a href="/about">About</a></li>
+
+			<li><a href="/experiment">Experiment</a></li>
+			
+			<li ><a href="/signin">sign in</a></li>
+			<li class="current_page_item"><a href="/signup">Sign up</a></li>
+
+                                  
+			<li ><a href="/contact">Contact</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="page" id="page">
+
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<div class="post">
+						
+                                                        
+						
+                                                         
+						<div class="entry">
+							
+                                                    <h2 class="title"><a href="#">Register for your ExpEyes account</a></h2><br><br>     
+                                                          
+	  <form name="myForm" onsubmit="return validateForm()"  class="form1" method="POST">
+          
+          <input type="text" name="fname" align="right"/> :  First Name<br><br>
+          <input type="text" name="lname" align="right"/> :  Last Name <br><br>
+         Male<input type="radio" name="gender" class="text2" value="male" /> 
+                       Female<input type="radio" name="gender" class="text2" value="female" /> :  Gender <br><br>
+         dd <input type="text" id="text1" class="text1" name="dd" maxlength="2" size="2"/>
+                          /mm <input type="text" id="text1" class="text1" name="mm" maxlength="2" size="2"/>
+                          /yyyy <input type="text" id="text1" class="text1" name="yyyy" maxlength="4" size="4"/> :  Date of Birth<br><br>
+           <input type="text" name="email" align="right"/> :  Email  <br><br>
+           <input type="password" name="pswd1" align="right"/> :  Password   <br><br>
+           <input type="password" name="pswd2" align="right"/> :  Confirm Password<br><br>
+
+          <p class="submit"><input type = "submit" value="Register"/>      <input type="reset" /></p>
+          
+          </form>
+
+						</div>
+					</div>
+					
+					<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>ExpEyes</h2>
+							<p>Experiment for Young engineers and scienitsts</p>
+						</li>
+						<li>
+							<h2>Menu</h2>
+							<ul>
+								<li><a href="/about">About</a><li>
+								<li><a href="/experiment">Experiment</a></li>
+								<li><a href="/signin">Sign in</a></li>
+								<li><a href="/signup">Sign up</a></li>
+								
+								<li><a href="/contact">Contact</a></li><br><br>
+ <a href="/contact"/><img src="static/images/submit.gif" width="48" height="48"/></a><br>
+<a href="/signin"/><img src="static/images/back.gif" width="48" height="48"/></a><br>
+								
+							</ul>
+						</li>
+
+                                       </ul>
+				</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) 2008 Sreeharikmarar.com All rights reserved. .</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
